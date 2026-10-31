@@ -1,0 +1,85 @@
+:root {
+  --bg: #f8f5f6;
+  --card: #ffffff;
+  --text: #1f2430;
+  --muted: #5b5f6d;
+  --border: #ebe3e7;
+  --primary: #be185d;
+  --primary-dark: #9d174d;
+  --accent: #fdba74;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16121a;
+    --card: #211b25;
+    --text: #f3eef1;
+    --muted: #b5aab1;
+    --border: #3a2f37;
+    --primary: #f472b6;
+    --primary-dark: #f9a8d4;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+}
+
+header {
+  background: linear-gradient(135deg, #db2777, #9d174d);
+  color: #fff;
+  padding: 20px 16px;
+}
+
+header .inner, main, footer .inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+header a.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 22px;
+}
+
+header a.brand img { width: 40px; height: 40px; border-radius: 10px; }
+
+nav { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 14px; font-size: 14px; }
+nav a { color: #fff; opacity: 0.9; }
+
+main { padding: 24px 16px 40px; }
+
+h1 { font-size: 28px; line-height: 1.25; margin: 8px 0 4px; }
+h2 { font-size: 20px; margin: 28px 0 8px; color: var(--primary-dark); }
+h3 { font-size: 17px; margin: 18px 0 6px; }
+p, li { color: var(--text); }
+.muted { color: var(--muted); font-size: 14px; }
+a { color: var(--primary); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin: 16px 0;
+}
+
+.hero { text-align: center; padding: 24px 0 8px; }
+.hero img { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 8px 24px rgba(157, 23, 77, 0.25); }
+.hero .claim { font-size: 20px; color: var(--muted); margin: 4px 0 18px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.pill { display: inline-block; background: rgba(190, 24, 93, 0.1); color: var(--primary-dark); border-radius: 999px; padding: 2px 10px; font-size: 13px; margin: 2px; }
+
+footer { border-top: 1px solid var(--border); padding: 18px 16px 28px; font-size: 14px; color: var(--muted); }
+footer a { color: var(--muted); }
